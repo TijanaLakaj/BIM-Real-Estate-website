@@ -23,3 +23,82 @@ h2,
 h4 {
     font-family: 'DM Serif Display', serif;
 }
+
+
+/* HEADER */
+
+
+
+
+
+/* HOME */
+
+.container-full-width {
+    position: relative;
+    text-align: center;
+
+    height: 260px;
+    width: 100%;
+}
+
+.container-full-width img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    opacity: 40%;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.centered-text h4 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+#home button {
+    height: 25px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#about {
+    margin: 30px;
+
+}
+
+#about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-div {
+    height: 200px;
+
+}
+
+.image-div img {
+    object-fit: cover;
+    height: inherit;
+}
+
+.text-div>* {
+    align-items: center;
+    text-align: center;
+}
