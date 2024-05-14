@@ -1,3 +1,5 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
 body,
 html {
     margin: 0;
@@ -59,7 +61,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
 }
 
 .centered-text h4 {
@@ -68,6 +70,7 @@ h4 {
 }
 
 #home button {
+    margin-top: 10px;
     height: 25px;
     width: 90px;
     border-radius: 10px;
@@ -75,9 +78,11 @@ h4 {
     color: #ffffff;
 }
 
-#about {
-    margin: 30px;
 
+/* ABOUT */
+
+#about {
+    padding: 30px 30px 15px 30px;
 }
 
 #about .container {
@@ -86,6 +91,12 @@ h4 {
     gap: 5px;
     justify-content: center;
     align-items: center;
+}
+
+#about .container .text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .image-div {
@@ -99,6 +110,51 @@ h4 {
 }
 
 .text-div>* {
-    align-items: center;
     text-align: center;
+    color: #000;
+
+}
+
+
+/* FUNKCIONALNOSTI */
+
+#funkcionalnosti {
+    padding: 15px 30px;
+}
+
+#funkcionalnosti .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#funkcionalnosti .container .text-div {
+    background-color: rgb(177 197 208 / 20%);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0 0 0 / 30%);
+    margin: 0 10px;
+    width: 220px;
+    /* max-width: 300px; */
+    /* min-width: 280px; */
+}
+
+.funkc-naslov {
+    font-size: 18px;
+}
+
+.funkc-naslov::after {
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+.open-funkc {
+    display: block;
+}
+
+.closed-funkc {
+    display: none;
 }
