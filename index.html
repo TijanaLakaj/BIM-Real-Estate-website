@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="style.css">
     <script src="index.js" charset="utf-8" defer></script>
@@ -69,10 +71,13 @@
     <section id="funkcionalnosti">
         <div class="container">
             <h2>Funkcionalnosti</h2>
-            <div class="text-div">
-                <h4 class="funkc-naslov">Automatsko zakazivanje</h4>
-                <div class="funkc-opis open-funkc">
-                    <img src="" alt="">
+            <div class="text-div open-section">
+                <div class="container-row">
+                    <h4 class="funkc-naslov">Automatsko zakazivanje</h4>
+                    <h4 class="arrow-up"></h4>
+                </div>
+                <div class="open-funkc">
+                    <img src="./images/pic1.png" alt="">
                     <p>Jednostavno postavite raspoložive termine za obilaske i održavanje stanova. Stanari mogu lako da
                         rezervišu termine prema svojim preferencijama, što smanjuje potrebu za telefonskim pozivima i
                         mejlovima. Ovaj sistem takođe omogućava praćenje zakazanih termina kao i upravljanje njima putem
@@ -80,10 +85,13 @@
                         i poboljšava efikasnost procesa zakazivanja. </p>
                 </div>
             </div>
-            <div class="text-div">
-                <h4 class="funkc-naslov">Integracija sa online plaćanjem</h4>
-                <div class="funkc-opis closed-funkc">
-                    <img src="" alt="">
+            <div class="text-div closed-section">
+                <div class="container-row">
+                    <h4 class="funkc-naslov">Integracija sa online plaćanjem</h4>
+                    <h4 class="arrow-down"></h4>
+                </div>
+                <div class="closed-funkc">
+                    <img src="./images/pic2.png" alt="">
                     <p>Naša integracija sa online plaćanjem omogućava stanarima da jednostavno i sigurno plate zakup
                         online. Stanarima je omogućeno da koriste različite metode plaćanja, kao što su kartice ili
                         e-novčanici. Ova integracija olakšava upravljanje finansijama stanara i povećava stopu naplate
@@ -91,10 +99,13 @@
                         i podsećanja na neizmirene obaveze.</p>
                 </div>
             </div>
-            <div class="text-div">
-                <h4 class="funkc-naslov">Praćenje troškova i prihoda</h4>
-                <div class="funkc-opis closed-funkc">
-                    <img src="" alt="">
+            <div class="text-div closed-section">
+                <div class="container-row">
+                    <h4 class="funkc-naslov">Praćenje troškova i prihoda</h4>
+                    <h4 class="arrow-down"></h4>
+                </div>
+                <div class="closed-funkc">
+                    <img src="./images/pic3.png" alt="">
                     <p>Detaljno pratite sve troškove održavanja zgrade i stanova, generišite izveštaje o troškovima za
                         određeni period i kategorizujte ih prema vrsti troška. Sistem takođe omogućava praćenje prihoda
                         od zakupa i generisanje izveštaja o naplati zakupa. Ovaj nivo detaljnosti u praćenju troškova i
@@ -106,61 +117,65 @@
     </section>
 
     <section id="video_uputstvo">
-        <div>
-            <div>
+        <div class="container">
+            <div class="text-div container-column">
                 <h2>Pogledajte kratko video uputstvo</h2>
                 <p>Duis eu magna eu nulla placerat rhoncus. Sed finibus non dolor sit amet porttitor. Class aptent
                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
-            <div>
-                <img src="" alt="">
-                <button>DEMO</button>
+            <div class="video_prikaz">
+                <img src="./images/video ss.PNG" alt="">
+                <!-- <button>DEMO</button> -->
+                <div class="circle">
+                    <div class="triangle"></div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <section id="benefiti">
-        <div>
+        <div class="container">
             <h2>Benefiti</h2>
-            <div>
-                <div>
+            <div class="all-benefits">
+                <div class="single-benefit">
                     <div>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined"> language </span>
                     </div>
-                    <div>
+                    <div class="container-column">
                         <h4>Povećana efikasnost u upravljanju nekretninama</h4>
                         <p>Automatizovali smo ključne procese, što je rezultiralo manjim gubicima vremena i resursa, a
                             poboljšanim opštim iskustvom svih strana.</p>
                     </div>
                 </div>
 
-                <div>
+                <div class="single-benefit">
                     <div>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined"> calendar_month </span>
                     </div>
-                    <div>
+                    <div class="container-column">
                         <h4>Optimizacija prihoda i smanjenje troškova održavanja</h4>
                         <p>Efikasnije upravljajte resursima, bolje planirajte investicije i pratite finansijske
                             performanse u realnom vremenu.</p>
                     </div>
                 </div>
 
-                <div>
+                <div class="single-benefit">
                     <div>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined"> person_add </span>
                     </div>
-                    <div>
+                    <div class="container-column">
                         <h4>Bolje iskustvo za stanare</h4>
                         <p>Stanari će doživeti značajno unapređeno iskustvo, zahvaljujući bržem rešavanju problema i
                             mogućnosti da svoje potrebe izraze na efikasniji način.</p>
                     </div>
                 </div>
 
-                <div>
+                <div class="single-benefit">
                     <div>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined"> lock_open </span>
                     </div>
-                    <div>
+                    <div class="container-column">
                         <h4>Poboljšana transparentnost poslovanja</h4>
                         <p>Kroz jasnu evidenciju troškova i prihoda, omogućavamo vam da donosite informisane odluke i
                             izbegnete nepotrebne rizike.</p>
@@ -177,7 +192,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="utisci">
         <div>
             <h2>Utisci zadovoljnih klijenata</h2>
             <div>
@@ -210,7 +225,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="last_CTA">
         <div>
             <div><img src="" alt=""></div>
             <div>

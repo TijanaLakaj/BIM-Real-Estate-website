@@ -115,12 +115,16 @@ h4 {
 
 }
 
-
-/* FUNKCIONALNOSTI */
-
-#funkcionalnosti {
+#funkcionalnosti,
+#benefiti,
+#galerija,
+#utisci,
+#last_CTA {
     padding: 15px 30px;
 }
+
+
+/* FUNKCIONALNOSTI */
 
 #funkcionalnosti .container {
     display: flex;
@@ -136,25 +140,183 @@ h4 {
     padding: 10px;
     border: 1px solid rgb(0 0 0 / 30%);
     margin: 0 10px;
-    width: 220px;
-    /* max-width: 300px; */
-    /* min-width: 280px; */
+    width: 280px;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.text-div .container-row {
+    gap: 10px;
+    justify-content: center;
 }
 
 .funkc-naslov {
     font-size: 18px;
 }
 
-.funkc-naslov::after {
+.arrow-up::after {
+    content: "\f106";
+    font-family: FontAwesome;
+}
+
+.arrow-down::after {
     content: "\f107";
     font-family: FontAwesome;
-    padding-left: 10px;
+}
+
+#funkcionalnosti .text-div:hover {
+    cursor: pointer;
+}
+
+.open-section {
+    height: max-content;
+}
+
+.closed-section {
+    height: 25px;
 }
 
 .open-funkc {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+
+    animation: open-funkc 1s normal forwards ease-in-out;
+    transform-origin: 50% 0%;
+}
+
+.open-funkc img {
+    height: 160px;
+    width: 280px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .closed-funkc {
     display: none;
+
+    animation: closed-funkc 1s normal forwards ease-in-out;
+    transform-origin: 100% 0%;
+}
+
+@keyframes open-funkc {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes closed-funkc {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
+}
+
+
+
+/* VIDEO UPUTSTVO */
+
+#video_uputstvo .container .video_prikaz {
+    position: relative;
+}
+
+#video_uputstvo .text-div {
+    padding: 15px 30px 0 30px;
+}
+
+.video_prikaz {
+    padding-top: 15px;
+}
+
+.video_prikaz img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+
+.circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: rgba(179, 179, 179, 0.3) 5px solid;
+
+    display: grid;
+    place-content: center;
+    animation: grow 1s infinite;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #4F87BA;
+}
+
+.triangle:hover {
+    cursor: pointer;
+}
+
+@keyframes grow {
+    from {
+        box-shadow: 0px 0px 1em #000;
+    }
+
+    to {
+        box-shadow: 0px 0px 3em #000;
+    }
+}
+
+
+
+/* BENEFITI */
+
+#benefiti .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#benefiti .container .all-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.single-benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-benefit .container-column {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
