@@ -187,8 +187,26 @@
     </section>
 
     <section id="galerija">
-        <div>
-            <div><img src="" alt=""></div>
+        <div class="container">
+            <div class="container-grid slideshow-container">
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior1.jpg" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior2.jpg" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior3.jpg" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior4.jpg" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior5.jpg" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior6.jpg" alt=""></div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div style="text-align:center; display:none">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
         </div>
     </section>
 
@@ -201,7 +219,7 @@
                     <p class="ime-klijenta">Marko Ivanović</p>
                     <p>Investitor</p>
                     <div class="review-star">
-                        <img src="./images/star.png" alt="">
+                        <img src="./images/star.png" alt="five star review">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
@@ -217,7 +235,7 @@
                     <p class="ime-klijenta">Jovana Žarkov</p>
                     <p>Stanar</p>
                     <div class="review-star">
-                        <img src="./images/star.png" alt="">
+                        <img src="./images/star.png" alt="five star review">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
@@ -232,7 +250,7 @@
                     <p class="ime-klijenta">Petar Milovanović</p>
                     <p>Bankar</p>
                     <div class="review-star">
-                        <img src="./images/star.png" alt="">
+                        <img src="./images/star.png" alt="five star review">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
                         <img src="./images/star.png" alt="">
@@ -246,13 +264,13 @@
     </section>
 
     <section id="last_CTA">
-        <div>
+        <div class="container">
             <div class="CTA-img"><img src="./images/Orto V2 proba1.png" alt=""></div>
             <div>
                 <h2>Želite da unapredite poslovanje?</h2>
                 <p>Pogledajte naš demo projekat kako bi to izgledalo</p>
             </div>
-            <div><button>DEMO</button></div>
+            <div class=""><button class="visit-demo" type="button"><span>DEMO</span></button></div>
         </div>
     </section>
 
@@ -268,15 +286,21 @@
 
             <div class="kontakt">
                 <h4>Kontaktirajte nas:</h4>
-                <p>+381 11 123 456</p>
-                <p>email</p>
+                <div class="container-row">
+                    <img src="./images/telephone.png" alt="">
+                    <p>+381 11 123 456</p>
+                </div>
+                <div class="container-row">
+                    <img src="./images/envelope.png" alt="">
+                    <a href="mailto:services@teamcad.rs">services@teamcad.rs</a>
+                </div>
 
                 <hr />
 
                 <div class="social-icons">
-                    <img src="./images/linkedin.png" alt="">
-                    <img src="./images/facebook.png" alt="">
-                    <img src="./images/instagram.png" alt="">
+                    <img src="./images/linkedin.png" alt="linkedin social icon">
+                    <img src="./images/facebook.png" alt="facebook social icon">
+                    <img src="./images/instagram.png" alt="instagram social icon">
                 </div>
             </div>
         </div>
