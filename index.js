@@ -1,3 +1,33 @@
+// ['left-to-right', 'right-to-left'].map(v=> group.classList.toggle(v) )
+
+// FUNKCIONALNOSTI OPEN/CLOSE ON CLICK
+const funkc = document.querySelector('#funkcionalnosti .text-div');
+const funkc_naslovi = { ...funkc };
+
+const funkc_opis = document.querySelector('#funkcionalnosti .open-funkc');
+const funkc_opisi = { ...funkc_opis };
+
+const arrow = document.querySelector('#funkcionalnosti .text-div .arrow-up');
+
+// funkc_naslovi.forEach((naslov) => {
+//     naslov.classList.toggle("open-section");
+//     naslov.classList.toggle("closed-section");
+//     console.log('div was clicked');
+// })
+funkc.addEventListener('click', function () {
+    funkc.classList.toggle("open-section");
+    funkc.classList.toggle("closed-section");
+
+    funkc_opis.classList.toggle("open-funkc");
+    funkc_opis.classList.toggle("closed-funkc");
+
+    arrow.classList.toggle("arrow-up");
+    arrow.classList.toggle("arrow-down");
+
+
+})
+
+
 // GALERY SLIDE
 let timer;
 let slideIndex = 1;
