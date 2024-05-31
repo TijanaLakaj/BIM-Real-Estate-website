@@ -79,6 +79,7 @@ h4 {
 }
 
 
+
 /* ABOUT */
 
 #about {
@@ -123,6 +124,7 @@ h4 {
 }
 
 
+
 /* FUNKCIONALNOSTI */
 
 #funkcionalnosti .container {
@@ -133,6 +135,12 @@ h4 {
     align-items: center;
 }
 
+#funkcionalnosti .opisi {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 #funkcionalnosti .container .text-div {
     background-color: rgb(177 197 208 / 20%);
     border-radius: 10px;
@@ -140,6 +148,10 @@ h4 {
     border: 1px solid rgb(0 0 0 / 30%);
     margin: 0 10px;
     width: 280px;
+}
+
+.open-funkc .funkc-naslov {
+    display: none;
 }
 
 .container-row {
@@ -192,8 +204,8 @@ h4 {
     gap: 10px;
     padding-top: 10px;
 
-    animation: open-funkc 1s normal forwards ease-in-out;
-    transform-origin: 50% 0%;
+    /* animation: open-funkc 1s normal forwards ease-in-out;
+    transform-origin: 50% 0%; */
 }
 
 .open-funkc img {
@@ -206,8 +218,8 @@ h4 {
 .closed-funkc {
     display: none;
 
-    animation: closed-funkc 1s normal forwards ease-in-out;
-    transform-origin: 100% 0%;
+    /* animation: closed-funkc 1s normal forwards ease-in-out;
+    transform-origin: 100% 0%; */
 }
 
 @keyframes open-funkc {
@@ -251,6 +263,7 @@ h4 {
     width: 100%;
     max-height: 180px;
     object-fit: cover;
+    filter: brightness(65%);
 }
 
 
@@ -304,7 +317,7 @@ h4 {
     align-items: center;
 }
 
-#benefiti .container>h2 {
+#benefiti .container h2 {
     padding-bottom: 15px;
 }
 
@@ -337,6 +350,7 @@ h4 {
 
 
 /* GALERIJA */
+
 #galerija .container {
     height: auto;
 }
@@ -394,6 +408,11 @@ h4 {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevR,
+.nextR {
+    display: none;
 }
 
 .dot {
@@ -596,4 +615,162 @@ hr {
     object-fit: cover;
     height: 100%;
     filter: invert(90%);
+}
+
+
+
+
+@media screen and (min-width: 481px) {
+    .centered-text {
+        width: 500px;
+    }
+
+    .centered-text h1 {
+        font-size: 30px;
+    }
+
+    .centered-text h4 {
+        font-size: 18px;
+    }
+
+    #home button {
+        padding: 10px 14px;
+        height: 40px;
+    }
+
+
+    #about,
+    #benefiti,
+    #galerija {
+        margin: 0 30px;
+    }
+
+    #about .container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #about .container .image-div {
+        height: 250px;
+    }
+
+    #about .container .text-div {
+        width: 330px;
+    }
+
+
+    #funkcionalnosti .naslov {
+        display: none;
+    }
+
+    #funkcionalnosti .opisi {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    #funkcionalnosti .container .text-div {
+        width: 210px;
+        margin: 0 5px;
+        border: none;
+        background-color: unset;
+    }
+
+    #funkcionalnosti .container-row {
+        display: none;
+    }
+
+    #funkcionalnosti .open-funkc img {
+        width: 210px;
+    }
+
+    .open-funkc .funkc-naslov {
+        display: block;
+    }
+
+    #funkcionalnosti p {
+        font-size: 14px;
+    }
+
+
+    #video_uputstvo {
+        margin: 10px 0;
+    }
+
+    #video_uputstvo .text-div {
+        display: none;
+    }
+
+    .video_prikaz img {
+        max-height: 230px;
+    }
+
+    .circle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .triangle {
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 20px solid #4F87BA;
+    }
+
+
+    #benefiti .container h2 {
+        padding-bottom: 25px;
+    }
+
+    #benefiti .container .all-benefits {
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    #benefiti .container .single-benefit {
+        width: 280px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .single-benefit .container-column {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    #benefiti p {
+        font-size: 14px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 45px;
+    }
+
+    .svi-utisci {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #utisci .utisak {
+        width: 400px;
+        height: 180px;
+        padding: 0;
+    }
+
+    #utisci .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+
+
+
+    #last_CTA .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
 }
