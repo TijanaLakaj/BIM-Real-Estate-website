@@ -59,6 +59,8 @@ function showSlides(n) {
     // timer = setTimeout(() => plusSlides(1), 2000);
 }
 
+
+// CLIENT REVIEW SLIDE
 let reviewTimer;
 let reviewIndex = 1;
 showReviews(reviewIndex);
@@ -74,17 +76,17 @@ function currentReview(n) {
 function showReviews(n) {
     let i;
     let reviews = document.getElementsByClassName("myReview");
-    let dots = document.getElementsByClassName("dot");
+    let dotsR = document.getElementsByClassName("dotR");
     if (n > reviews.length) { reviewIndex = 1 }
-    if (n < 1) { reviewIndex = Reviews.length }
+    if (n < 1) { reviewIndex = reviews.length }
     for (i = 0; i < reviews.length; i++) {
         reviews[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < dotsR.length; i++) {
+        dotsR[i].className = dotsR[i].className.replace(" active", "");
     }
     reviews[reviewIndex - 1].style.display = "block";
-    dots[reviewIndex - 1].className += " active";
+    dotsR[reviewIndex - 1].className += " active";
     // clearTimeout(reviewTimer);
-    // reviewTimer = setTimeout(() => plusReview(1), 2000);
+    // reviewTimer = setTimeout(() => plusReview(1), 5000);
 }
