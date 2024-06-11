@@ -1,4 +1,46 @@
-// ['left-to-right', 'right-to-left'].map(v=> group.classList.toggle(v) )
+// shading the body when navbar is open
+const navbar = document.querySelector('.dropdown-reveal');
+const body = document.querySelector('body');
+
+navbar.addEventListener('click', () => {
+    body.classList.toggle('fixed-position');
+})
+
+
+
+// closing the navbar
+// const html = document.documentElement;
+// const menu = document.getElementById('myMenuId');
+
+// function openMenu() {
+//     // add class to the menu to make it show
+//     menu.classList.add('animate');
+
+//     // add event listener to the html element
+//     html.addEventListener('click', closeMenuOnBodyClick);
+// }
+
+// function closeMenu() {
+//     // add class to the menu to make it show
+//     menu.classList.remove('animate');
+
+//     // add event listener to the html element
+//     html.removeEventListener('click', closeMenuOnBodyClick);
+// }
+
+// function closeMenuOnBodyClick(event) {
+//     // get the event path
+//     const path = event.composedPath();
+
+//     // check if it has the menu element
+//     if (path.some(elem => elem.id === 'myMenuId')) {
+//         // terminate this function if it does
+//         return;
+//     }
+//     closeMenu();
+// }
+
+
 
 // FUNKCIONALNOSTI OPEN/CLOSE ON CLICK
 const funkc = document.querySelector('#funkcionalnosti .text-div');
@@ -56,7 +98,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
     // clearTimeout(timer);
-    // timer = setTimeout(() => plusSlides(1), 2000);
+    // timer = setTimeout(() => plusSlides(1), 3000);
 }
 
 

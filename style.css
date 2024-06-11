@@ -26,8 +26,47 @@ h4 {
     font-family: 'DM Serif Display', serif;
 }
 
+.fixed-position {
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-header {
+    display: none;
+}
 
 /* HEADER */
+label,
+input {
+    display: none;
+}
+
+.dropdown-list {
+    list-style: none;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+.dropdown-list a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+header svg {
+    display: none;
+}
+
+li {
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+li:hover {
+    font-weight: bold;
+}
 
 
 
@@ -47,7 +86,7 @@ h4 {
     height: inherit;
     width: inherit;
     object-fit: cover;
-    opacity: 40%;
+    opacity: 35%;
 }
 
 .centered-text {
@@ -71,7 +110,7 @@ h4 {
 
 #home button {
     margin-top: 10px;
-    height: 25px;
+    height: 35px;
     width: 90px;
     border-radius: 10px;
     background-color: #000000;
@@ -620,7 +659,153 @@ hr {
 
 
 
+@media screen and (max-width: 480px) {
+    .mobile-header {
+        display: block;
+        height: 63px;
+    }
+
+    header {
+        padding: 15px 30px;
+        height: max-content;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+    }
+
+    header .container {
+        display: inline-flex;
+        /* justify-content: left; */
+
+        align-items: center;
+    }
+
+    header svg {
+        display: inline;
+    }
+
+    label {
+        display: inline-block;
+    }
+
+
+    label.dropdown-reveal::before {
+        content: "\f0c9";
+        font-family: FontAwesome;
+        font-size: 18px;
+        padding-right: 20px;
+    }
+
+    .dropdown-list {
+        /* display: none; */
+        position: absolute;
+        top: 60px;
+
+        background-color: #ffffff;
+        z-index: 2;
+        width: 80%;
+        /* height: 100vh; */
+        padding: 0 35px;
+        touch-action: none;
+
+        transition-timing-function: ease-in;
+        transition: 0.2s;
+        transform: translateX(-110%);
+    }
+
+    input[type=checkbox]:checked~.dropdown-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* left: 0px; */
+        transition-timing-function: ease-out;
+        transition: 0.25s;
+        transform: translateX(-10%);
+    }
+
+    .dropdown-list a {
+        /* padding-left: 10px; */
+        width: 380px;
+        padding: 20px 0 20px 10px;
+        /* height: 60px;
+        align-content: center; */
+    }
+
+    li {
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        padding: 0px 5px;
+    }
+
+    li:hover {
+        background-color: #f7f7f7;
+        border-radius: 10px;
+    }
+
+    .demo-button {
+        background-color: #000;
+        border-radius: 10px;
+        width: 90%;
+        padding: 8px;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    #demo-button {
+        color: #ffffff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        vertical-align: baseline;
+        width: inherit;
+        text-align: center;
+        padding: 0;
+    }
+
+    .demo-button:hover {
+        background-color: #003a1f;
+    }
+
+
+
+}
+
+
+
 @media screen and (min-width: 481px) {
+    header {
+        height: 60px;
+        display: flex;
+        margin: 0 30px;
+    }
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    header .container,
+    .dropdown-list {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .demo-button {
+        background-color: #000;
+        border-radius: 10px;
+        width: 60px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #demo-button {
+        color: #ffffff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        vertical-align: baseline;
+    }
+
+
     .centered-text {
         width: 500px;
     }
@@ -636,6 +821,10 @@ hr {
     #home button {
         padding: 10px 14px;
         height: 40px;
+    }
+
+    .container-full-width {
+        height: 300px;
     }
 
 
@@ -746,6 +935,12 @@ hr {
         font-size: 45px;
     }
 
+
+    #galerija img {
+        height: 500px;
+    }
+
+
     .svi-utisci {
         position: relative;
         width: 100%;
@@ -758,6 +953,7 @@ hr {
         height: 180px;
         padding: 0;
     }
+
 
 
 
@@ -787,3 +983,19 @@ hr {
         display: block;
     }
 }
+
+/* @media screen and (min-width: 769px) {
+    section {
+        width: 900px;
+    }
+
+    #galerija .container .container-grid {
+        display: flex;
+        overflow: auto;
+    }
+
+    .swipe {
+        overflow: auto;
+        white-space: nowrap;
+    }
+} */
