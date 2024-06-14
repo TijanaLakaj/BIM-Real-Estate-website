@@ -22,12 +22,14 @@
 <body>
     <header>
         <div class="container">
-            <label for="lista" class="dropdown-reveal"></label>
-            <input id="lista" type="checkbox">
+            <div class="menu-button" onclick="openMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <h2>BIM Real Estate</h2>
 
-            <!-- <div class=""> -->
-            <ul class="dropdown-list">
+            <ul class="dropdown-list hidden">
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20" height="20">
                         <path
@@ -87,7 +89,6 @@
                     <a href="#kontakt_info">Kontakt</a>
                 </li>
             </ul>
-            <!-- </div> -->
         </div>
     </header>
 
@@ -189,9 +190,8 @@
                 <p>Duis eu magna eu nulla placerat rhoncus. Sed finibus non dolor sit amet porttitor. Class aptent
                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
-            <div class="video_prikaz">
-                <img src="./images/video ss.PNG" alt="">
-                <!-- <button>DEMO</button> -->
+            <div class="video_prikaz" onclick="full_view(this)">
+                <img class="img-source" src="./images/video ss.PNG" alt="">
                 <div class="circle">
                     <div class="triangle"></div>
                 </div>
@@ -345,6 +345,14 @@
             <div class=""><button class="visit-demo" type="button"><span>DEMO</span></button></div>
         </div>
     </section>
+
+    <div id="img-viewer" class="modal hidden">
+        <div class="container-column">
+            <span class="btn-close close" onclick="closeModal()">x</span>
+            <img class="modal-content" id="full-image" src="./images/video ss.PNG">
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
 
     <footer id="kontakt_info">
         <div class="container">

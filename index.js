@@ -1,44 +1,24 @@
-// shading the body when navbar is open
-const navbar = document.querySelector('.dropdown-reveal');
-const body = document.querySelector('body');
-
-navbar.addEventListener('click', () => {
-    body.classList.toggle('fixed-position');
-})
-
-
 
 // closing the navbar
-// const html = document.documentElement;
-// const menu = document.getElementById('myMenuId');
+const html = document.documentElement;
+const menu_btn = document.querySelector('.menu-button');
+const menu = document.querySelector('.dropdown-list');
+const menuItems = document.querySelectorAll('.dropdown-list li');
+const body = document.querySelector('body');
 
-// function openMenu() {
-//     // add class to the menu to make it show
-//     menu.classList.add('animate');
+menuItems.forEach(item => {
+    item.addEventListener('click', openMenu);
+});
 
-//     // add event listener to the html element
-//     html.addEventListener('click', closeMenuOnBodyClick);
-// }
+function openMenu() {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('visible');
+    menu_btn.classList.toggle('change');
+}
 
-// function closeMenu() {
-//     // add class to the menu to make it show
-//     menu.classList.remove('animate');
-
-//     // add event listener to the html element
-//     html.removeEventListener('click', closeMenuOnBodyClick);
-// }
-
-// function closeMenuOnBodyClick(event) {
-//     // get the event path
-//     const path = event.composedPath();
-
-//     // check if it has the menu element
-//     if (path.some(elem => elem.id === 'myMenuId')) {
-//         // terminate this function if it does
-//         return;
-//     }
-//     closeMenu();
-// }
+menu_btn.addEventListener('click', () => {
+    body.classList.toggle('fixed-position');
+})
 
 
 
@@ -132,3 +112,32 @@ function showReviews(n) {
     // clearTimeout(reviewTimer);
     // reviewTimer = setTimeout(() => plusReview(1), 5000);
 }
+
+
+// FULL SCREEN IMAGE PREVIEW
+
+const closeModalBtn = document.querySelector(".btn-close");
+const modal = document.querySelector("#img-viewer");
+const overlay = document.querySelector(".overlay");
+
+function full_view(ele) {
+    document.querySelector('#img-viewer').classList.toggle("hidden");
+    document.querySelector('.overlay').classList.toggle("hidden");
+}
+
+// close modal function
+const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+};
+
+// close the modal when the close button and overlay is clicked
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// close modal when the Esc key is pressed
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+    }
+});
