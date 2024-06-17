@@ -23,31 +23,61 @@ menu_btn.addEventListener('click', () => {
 
 
 // FUNKCIONALNOSTI OPEN/CLOSE ON CLICK
-const funkc = document.querySelector('#funkcionalnosti .text-div');
-const funkc_naslovi = { ...funkc };
 
-const funkc_opis = document.querySelector('#funkcionalnosti .open-funkc');
-const funkc_opisi = { ...funkc_opis };
+function open_funkc(divId) {
+    var ceoDiv = document.getElementById(divId);
+    const funkc_opis = ceoDiv.querySelector(".open-funkc, .closed-funkc");
+    const arrow = ceoDiv.querySelector(".arrow-up, .arrow-down");
 
-const arrow = document.querySelector('#funkcionalnosti .text-div .arrow-up');
+    ceoDiv.classList.toggle("open-section");
+    ceoDiv.classList.toggle("closed-section");
 
-// funkc_naslovi.forEach((naslov) => {
-//     naslov.classList.toggle("open-section");
-//     naslov.classList.toggle("closed-section");
-//     console.log('div was clicked');
-// })
-funkc.addEventListener('click', function () {
-    funkc.classList.toggle("open-section");
-    funkc.classList.toggle("closed-section");
+    if (funkc_opis) {
+        funkc_opis.classList.toggle("open-funkc");
+        funkc_opis.classList.toggle("closed-funkc");
+    }
 
-    funkc_opis.classList.toggle("open-funkc");
-    funkc_opis.classList.toggle("closed-funkc");
+    if (arrow) {
+        arrow.classList.toggle("arrow-up");
+        arrow.classList.toggle("arrow-down");
+    }
+}
 
-    arrow.classList.toggle("arrow-up");
-    arrow.classList.toggle("arrow-down");
+function updateClassesBasedOnWidth() {
+    document.querySelectorAll('.text-div').forEach(function (div) {
+        if (window.innerWidth > 480) {
+            div.classList.add("open-section");
+            div.classList.remove("closed-section");
+            div.classList.add("no-click");
+
+            var funkcDiv = div.querySelector(".open-funkc, .closed-funkc");
+            if (funkcDiv) {
+                funkcDiv.classList.add("open-funkc");
+                funkcDiv.classList.remove("closed-funkc");
+            }
+
+            var arrow = div.querySelector(".arrow-up, .arrow-down");
+            if (arrow) {
+                arrow.classList.add("arrow-up");
+                arrow.classList.remove("arrow-down");
+            }
+        } else {
+            div.classList.remove("no-click");
+        }
+    });
+}
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth <= 480) {
+        updateClassesBasedOnWidth();
+    }
+});
 
 
-})
+if (window.innerWidth > 480) {
+    updateClassesBasedOnWidth();
+}
+
 
 
 // GALERY SLIDE

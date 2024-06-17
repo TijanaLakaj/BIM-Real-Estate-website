@@ -31,7 +31,13 @@ h4 {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.mobile-header {
+.no-click {
+    pointer-events: none;
+}
+
+.mobile-header,
+.menu-button,
+.demo-button {
     display: none;
 }
 
@@ -149,7 +155,8 @@ li:hover {
     height: inherit;
 }
 
-.text-div>* {
+.text-div>*,
+.glavni-opis>* {
     text-align: center;
     color: #000;
 
@@ -288,7 +295,7 @@ li:hover {
     position: relative;
 }
 
-#video_uputstvo .text-div {
+#video_uputstvo .container-column {
     padding: 15px 30px 0 30px;
     gap: 10px;
 }

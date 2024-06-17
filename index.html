@@ -110,7 +110,7 @@
             <div class="image-div">
                 <img src="./images/Orto Final2.png" alt="">
             </div>
-            <div class="text-div">
+            <div class="glavni-opis">
                 <h2>Poboljšajte svoje poslovanje već danas</h2>
                 <p>Upoznajte naš sveobuhvatan set alata za upravljanje nekretninama dizajniranih da optimizuju vaše
                     poslovanje, unaprede iskustvo stanara i maksimiziraju vašu zaradu. Naša integrisana rešenja pružaju
@@ -124,7 +124,7 @@
         <div class="container">
             <h2 class="naslov">Funkcionalnosti</h2>
             <div class="opisi">
-                <div class="text-div open-section">
+                <div id="divId1" class="text-div open-section" onclick="open_funkc('divId1')">
                     <div class="container-row">
                         <h4 class="funkc-naslov">Automatsko zakazivanje</h4>
                         <h4 class="arrow-up"></h4>
@@ -143,12 +143,12 @@
                             i poboljšava efikasnost procesa zakazivanja. </p>
                     </div>
                 </div>
-                <div class="text-div open-section">
+                <div id="divId2" class="text-div closed-section" onclick="open_funkc('divId2')">
                     <div class="container-row">
                         <h4 class="funkc-naslov">Integracija sa online plaćanjem</h4>
-                        <h4 class="arrow-up"></h4>
+                        <h4 class="arrow-down"></h4>
                     </div>
-                    <div class="open-funkc">
+                    <div class="closed-funkc">
                         <img src="./images/pic2.png" alt="">
                         <h4 class="funkc-naslov">Integracija sa online plaćanjem</h4>
                         <p>Naša integracija sa online plaćanjem omogućava stanarima da jednostavno i sigurno plate zakup
@@ -160,12 +160,12 @@
                             i podsećanja na neizmirene obaveze.</p>
                     </div>
                 </div>
-                <div class="text-div open-section">
+                <div id="divId3" class="text-div closed-section" onclick="open_funkc('divId3')">
                     <div class="container-row">
                         <h4 class="funkc-naslov">Praćenje troškova i prihoda</h4>
-                        <h4 class="arrow-up"></h4>
+                        <h4 class="arrow-down"></h4>
                     </div>
-                    <div class="open-funkc">
+                    <div class="closed-funkc">
                         <img src="./images/pic3.png" alt="">
                         <h4 class="funkc-naslov">Praćenje troškova i prihoda</h4>
                         <p>Detaljno pratite sve troškove održavanja zgrade i stanova, generišite izveštaje o troškovima
@@ -185,7 +185,7 @@
 
     <section id="video_uputstvo">
         <div class="container">
-            <div class="text-div container-column">
+            <div class="glavni-opis container-column">
                 <h2>Pogledajte kratko video uputstvo</h2>
                 <p>Duis eu magna eu nulla placerat rhoncus. Sed finibus non dolor sit amet porttitor. Class aptent
                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
