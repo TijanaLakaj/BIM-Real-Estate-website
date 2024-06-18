@@ -112,6 +112,42 @@ function showSlides(n) {
 }
 
 
+
+// GALERY GRID SLIDE
+let gridTimer;
+let gridSlideIndex = 1;
+showGridSlides(gridSlideIndex);
+
+function plusGridSlides(n) {
+    showGridSlides(gridSlideIndex += n);
+}
+
+function currentGridSlide(n) {
+    showGridSlides(gridSlideIndex = n);
+}
+
+function showGridSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("myGridSlides");
+    let dots = document.getElementsByClassName("dotGrid");
+    if (n > slides.length) { gridSlideIndex = 1 }
+    if (n < 1) { gridSlideIndex = slides.length - 2 }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[gridSlideIndex - 1].style.display = "block";
+    dots[gridSlideIndex - 1].className += " active";
+}
+// clearTimeout(gridTimer);
+// gridTimer = setTimeout(() => plusGridSlides(1), 3000);
+
+
 // CLIENT REVIEW SLIDE
 let reviewTimer;
 let reviewIndex = 1;
@@ -153,12 +189,14 @@ const overlay = document.querySelector(".overlay");
 function full_view(ele) {
     document.querySelector('#img-viewer').classList.toggle("hidden");
     document.querySelector('.overlay').classList.toggle("hidden");
+    body.classList.toggle('fixed-position');
 }
 
 // close modal function
 const closeModal = function () {
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
+    body.classList.toggle('fixed-position');
 };
 
 // close the modal when the close button and overlay is clicked

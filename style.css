@@ -35,6 +35,7 @@ h4 {
     pointer-events: none;
 }
 
+#galerija_grid,
 .mobile-header,
 .menu-button,
 .demo-button {
@@ -500,7 +501,7 @@ li:hover {
 
 .utisak {
     padding: 10px 0;
-    /* height: 165px; */
+    height: 180px;
     /* align-items: center; */
     /* gap: 5px; */
 }
@@ -520,10 +521,6 @@ li:hover {
 /* LAST CTA */
 
 #last_CTA {
-    /* position: relative; */
-    /* height: 200px; */
-    /* margin: 70px 30px 30px 30px; */
-
     margin: 15px 30px 30px 30px;
     padding: 15px;
     border-radius: 20px;
@@ -536,13 +533,6 @@ li:hover {
     text-align: center;
     justify-content: end;
 }
-
-/* .CTA-img {
-    position: absolute;
-    bottom: 60%;
-    left: 50%;
-    translate: (-50%, -50%);
-} */
 
 .CTA-img img {
     object-fit: cover;
@@ -920,6 +910,7 @@ hr {
     #home button {
         padding: 10px 14px;
         height: 40px;
+        font-size: 14px;
     }
 
     .container-full-width {
@@ -977,7 +968,7 @@ hr {
     }
 
     #funkcionalnosti p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -1027,7 +1018,7 @@ hr {
     }
 
     #benefiti p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .material-symbols-outlined {
@@ -1083,18 +1074,124 @@ hr {
     }
 }
 
-/* @media screen and (min-width: 769px) {
-    section {
+@media screen and (min-width: 769px) {
+
+    /* HOME */
+    .container-full-width {
+        height: 450px;
+    }
+
+    .centered-text {
+        width: max-content;
+    }
+
+    .centered-text h1 {
+        font-size: 36px;
+    }
+
+    .centered-text h4 {
+        font-size: 22px;
+    }
+
+    #home button {
+        font-size: 16px;
+        height: 50px;
+        width: 100px;
+
+    }
+
+
+    #about,
+    #funkcionalnosti,
+    #benefiti,
+    #galerija_grid,
+    #last_CTA {
+        display: flex;
+        justify-content: center;
+    }
+
+    #about .container,
+    #funkcionalnosti .container,
+    #benefiti .container,
+    #galerija_grid .container,
+    #last_CTA .container {
         width: 900px;
     }
 
-    #galerija .container .container-grid {
-        display: flex;
-        overflow: auto;
+    /* ABOUT */
+    #about .container .image-div {
+        height: 350px;
     }
 
-    .swipe {
-        overflow: auto;
-        white-space: nowrap;
+    #about .glavni-opis {
+        width: 400px;
     }
-} */
+
+    /* FUNKCIONALNOSTI */
+    #funkcionalnosti .container .text-div {
+        width: 290px;
+    }
+
+    #funkcionalnosti .open-funkc img {
+        width: 290px;
+        height: 200px;
+    }
+
+    /* VIDEO */
+    #video_uputstvo .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video_prikaz {
+        width: 100%;
+    }
+
+    .video_prikaz img {
+        max-height: 350px;
+    }
+
+    #video_uputstvo .glavni-opis {
+        width: 600px;
+    }
+
+    /* BENEFITI */
+    #benefiti .container .single-benefit {
+        width: 350px;
+    }
+
+    /* GALERIJA GRID */
+    #galerija {
+        display: none;
+    }
+
+    #galerija_grid .container-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    #galerija_grid img {
+        border-radius: 10px;
+    }
+
+    .oneSlide .slide-image {
+        object-fit: cover;
+    }
+
+    .one-image-div {
+        height: 600px;
+        width: 290px;
+    }
+
+    .two-image-div {
+        height: 600px;
+        width: 280px;
+        gap: 20px;
+    }
+
+    .two-image-div img {
+        height: 290px;
+    }
+
+}

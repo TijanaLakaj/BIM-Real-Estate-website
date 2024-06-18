@@ -100,7 +100,7 @@
             <div class="centered-text">
                 <h1>Revolucija u upravljanju projektima</h1>
                 <h4>sa našim integrisanim rešenjima</h4>
-                <button>DEMO</button>
+                <button class="">DEMO</button>
             </div>
         </div>
     </section>
@@ -254,9 +254,11 @@
 
     <section id="galerija">
         <div class="container">
-            <div class="container-grid slideshow-container">
-                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior1.jpg" alt=""></div>
-                <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior2.jpg" alt=""></div>
+            <div class="slideshow-container">
+                <div class="mySlides fade-anim"><img class="slide-image"
+                        src="./images/Apartman21_Interior 2Composited(Dnevni boravak).png" alt=""></div>
+                <div class="mySlides fade-anim"><img class="slide-image"
+                        src="./images/Apartman21_Interior 5Composited(Kuhinja).png" alt=""></div>
                 <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior3.jpg" alt=""></div>
                 <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior4.jpg" alt=""></div>
                 <div class="mySlides fade-anim"><img class="slide-image" src="./images/interior5.jpg" alt=""></div>
@@ -276,10 +278,52 @@
         </div>
     </section>
 
+    <section id="galerija_grid">
+        <div class="container">
+            <div class="container-row slideshow-container">
+                <div class="oneSlide myGridSlides fade-anim">
+                    <div class="one-image-div">
+                        <img class="slide-image" src="./images/interior1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="oneSlide myGridSlides fade-anim">
+                    <div class="two-image-div container-column">
+                        <img class="slide-image" src="./images/interior2.jpg" alt="">
+                        <img class="slide-image" src="./images/interior3.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="oneSlide myGridSlides fade-anim">
+                    <div class="one-image-div">
+                        <img class="slide-image" src="./images/interior4.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="oneSlide myGridSlides fade-anim">
+                    <div class="two-image-div container-column">
+                        <img class="slide-image" src="./images/interior5.jpg" alt="">
+                        <img class="slide-image" src="./images/interior6.jpg" alt="">
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusGridSlides(-1)">❮</a>
+                <a class="next" onclick="plusGridSlides(1)">❯</a>
+            </div>
+
+            <div style="text-align:center; display:none">
+                <span class="dotGrid" onclick="currentGridSlide(1)"></span>
+                <span class="dotGrid" onclick="currentGridSlide(2)"></span>
+                <span class="dotGrid" onclick="currentGridSlide(3)"></span>
+                <span class="dotGrid" onclick="currentGridSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
     <section id="utisci">
         <div class="container">
             <!-- <h2>Utisci zadovoljnih klijenata</h2> -->
-            <div class="svi-utisci swipe">
+            <div class="svi-utisci">
                 <div class="utisak myReview fade-anim container-column">
                     <!-- <img src="" alt=""> -->
                     <p class="ime-klijenta">Marko Ivanović</p>
