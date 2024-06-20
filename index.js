@@ -115,37 +115,37 @@ function showSlides(n) {
 
 // GALERY GRID SLIDE
 let gridTimer;
-let gridSlideIndex = 1;
-showGridSlides(gridSlideIndex);
+let currentSlideIndex = 0;
+
+const slides = document.querySelectorAll(".oneSlide");
+const totalSlides = slides.length;
+
+function showGridSlides() {
+    slides.forEach(slide => slide.classList.remove('left', 'middle', 'right'));
+
+    const prevSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    const nextSlideIndex = (currentSlideIndex + 1) % totalSlides;
+
+    slides[prevSlideIndex].classList.add('left');
+    slides[currentSlideIndex].classList.add('middle');
+    slides[nextSlideIndex].classList.add('right');
+    // clearTimeout(gridTimer);
+    // gridTimer = setTimeout(() => plusGridSlides(1), 4000);
+}
 
 function plusGridSlides(n) {
-    showGridSlides(gridSlideIndex += n);
+    currentSlideIndex = (currentSlideIndex + n + totalSlides) % totalSlides;
+    showGridSlides();
 }
 
 function currentGridSlide(n) {
-    showGridSlides(gridSlideIndex = n);
+    currentSlideIndex = (n - 1 + totalSlides) % totalSlides;
+    showGridSlides();
 }
 
-function showGridSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("myGridSlides");
-    let dots = document.getElementsByClassName("dotGrid");
-    if (n > slides.length) { gridSlideIndex = 1 }
-    if (n < 1) { gridSlideIndex = slides.length - 2 }
+// Initial call to display the slides
+showGridSlides();
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[gridSlideIndex - 1].style.display = "block";
-    dots[gridSlideIndex - 1].className += " active";
-}
-// clearTimeout(gridTimer);
-// gridTimer = setTimeout(() => plusGridSlides(1), 3000);
 
 
 // CLIENT REVIEW SLIDE
