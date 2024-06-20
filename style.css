@@ -542,10 +542,12 @@ li:hover {
 #last_CTA h2 {
     font-weight: 400;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 #last_CTA p {
     padding-bottom: 15px;
+    text-align: center;
 }
 
 #last_CTA .visit-demo {
@@ -859,8 +861,6 @@ hr {
 
 }
 
-
-
 @media screen and (min-width: 481px) {
     header {
         height: 60px;
@@ -1056,6 +1056,10 @@ hr {
         text-align: left;
     }
 
+    #last_CTA h2 {
+        width: 300px;
+    }
+
     #kontakt_info .container {
         display: flex;
         justify-content: space-between;
@@ -1103,8 +1107,10 @@ hr {
 
     #about,
     #funkcionalnosti,
+    #video_uputstvo,
     #benefiti,
     #galerija_grid,
+    #utisci,
     #last_CTA {
         display: flex;
         justify-content: center;
@@ -1142,6 +1148,8 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: fit-content;
+        min-width: 100%;
     }
 
     .video_prikaz {
@@ -1149,7 +1157,7 @@ hr {
     }
 
     .video_prikaz img {
-        max-height: 350px;
+        max-height: 400px;
     }
 
     #video_uputstvo .glavni-opis {
@@ -1157,9 +1165,14 @@ hr {
     }
 
     /* BENEFITI */
+    #benefiti .container h2 {
+        padding-bottom: 35px;
+    }
+
     #benefiti .container .single-benefit {
         width: 350px;
     }
+
 
     /* GALERIJA GRID */
     #galerija {
@@ -1167,7 +1180,7 @@ hr {
     }
 
     #galerija_grid .container {
-        padding: 30px 0;
+        padding: 40px 0;
     }
 
     #galerija_grid .container-row {
@@ -1225,5 +1238,71 @@ hr {
         left: 66.66%;
         display: block;
     }
+
+
+    #last_CTA {
+        background-color: transparent;
+    }
+
+    #last_CTA .container {
+        justify-content: space-around;
+        width: 840px;
+        border-radius: 20px;
+        background-color: #4F87BA;
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .CTA-img img {
+        height: 170px;
+    }
+
+    #last_CTA h2 {
+        font-size: 32px;
+        width: 400px;
+    }
+
+    #last_CTA p {
+        font-size: 20px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    #video_uputstvo .container,
+    #galerija_grid .container {
+        width: 1200px;
+    }
+
+    .video_prikaz {
+        width: inherit;
+    }
+
+    .video_prikaz img {
+        border-radius: 15px;
+    }
+
+
+    .one-image-div {
+        width: 380px;
+    }
+
+    .two-image-div {
+        width: 380px;
+    }
+
+
+    #last_CTA .container {
+        width: 1040px;
+    }
+
+    .CTA-img img {
+        height: 200px;
+    }
+
+
 
 }
