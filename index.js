@@ -7,7 +7,10 @@ const menuItems = document.querySelectorAll('.dropdown-list li');
 const body = document.querySelector('body');
 
 menuItems.forEach(item => {
-    item.addEventListener('click', openMenu);
+    item.addEventListener('click', () => {
+        openMenu();
+        body.classList.remove('fixed-position');
+    });
 });
 
 function openMenu() {
@@ -107,8 +110,8 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    // clearTimeout(timer);
-    // timer = setTimeout(() => plusSlides(1), 3000);
+    clearTimeout(timer);
+    timer = setTimeout(() => plusSlides(1), 3000);
 }
 
 
@@ -175,8 +178,8 @@ function showReviews(n) {
     }
     reviews[reviewIndex - 1].style.display = "block";
     dotsR[reviewIndex - 1].className += " active";
-    // clearTimeout(reviewTimer);
-    // reviewTimer = setTimeout(() => plusReview(1), 5000);
+    clearTimeout(reviewTimer);
+    reviewTimer = setTimeout(() => plusReview(1), 5000);
 }
 
 
@@ -208,4 +211,26 @@ document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && !modal.classList.contains("hidden")) {
         closeModal();
     }
+});
+
+
+
+// ANIMATE ON LOAD SECTIONS
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
