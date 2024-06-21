@@ -720,6 +720,7 @@ hr {
 
 
 
+/* TELEFON */
 
 @media screen and (max-width: 480px) {
     .mobile-header {
@@ -861,6 +862,9 @@ hr {
 
 }
 
+
+/* TABLET */
+
 @media screen and (min-width: 481px) {
     header {
         height: 60px;
@@ -937,6 +941,10 @@ hr {
         width: 330px;
     }
 
+    #about h2 {
+        font-size: 28px;
+        width: 390px;
+    }
 
     #funkcionalnosti .naslov {
         display: none;
@@ -1017,7 +1025,7 @@ hr {
         align-items: flex-start;
     }
 
-    #benefiti p {
+    p {
         font-size: 16px;
     }
 
@@ -1041,7 +1049,7 @@ hr {
     #utisci .utisak {
         width: 400px;
         height: 180px;
-        padding: 0;
+        padding: 10px 0;
     }
 
 
@@ -1051,7 +1059,7 @@ hr {
 
     #last_CTA .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         text-align: left;
     }
@@ -1078,11 +1086,17 @@ hr {
     }
 }
 
+
+/* LAPTOP */
+
 @media screen and (min-width: 769px) {
+    header {
+        justify-content: center;
+    }
 
     /* HOME */
     .container-full-width {
-        height: 450px;
+        height: 600px;
     }
 
     .centered-text {
@@ -1104,6 +1118,9 @@ hr {
 
     }
 
+    h4 {
+        font-size: 20px;
+    }
 
     #about,
     #funkcionalnosti,
@@ -1130,12 +1147,21 @@ hr {
     }
 
     #about .glavni-opis {
-        width: 400px;
+        width: 410px;
+    }
+
+    .glavni-opis h2 {
+        font-size: 28px;
+        padding-bottom: 10px;
     }
 
     /* FUNKCIONALNOSTI */
     #funkcionalnosti .container .text-div {
         width: 290px;
+    }
+
+    .open-funkc h4 {
+        font-size: 20px;
     }
 
     #funkcionalnosti .open-funkc img {
@@ -1150,6 +1176,10 @@ hr {
         align-items: center;
         height: fit-content;
         min-width: 100%;
+    }
+
+    #video_uputstvo .container-column {
+        gap: 0;
     }
 
     .video_prikaz {
@@ -1167,10 +1197,16 @@ hr {
     /* BENEFITI */
     #benefiti .container h2 {
         padding-bottom: 35px;
+        font-size: 28px;
+    }
+
+    #benefiti .container .all-benefits {
+        gap: 0px;
     }
 
     #benefiti .container .single-benefit {
         width: 350px;
+        padding-bottom: 30px;
     }
 
 
@@ -1180,7 +1216,7 @@ hr {
     }
 
     #galerija_grid .container {
-        padding: 40px 0;
+        padding-bottom: 30px;
     }
 
     #galerija_grid .container-row {
@@ -1239,18 +1275,31 @@ hr {
         display: block;
     }
 
+    #galerija_grid a {
+        display: none;
+    }
+
+
 
     #last_CTA {
         background-color: transparent;
     }
 
     #last_CTA .container {
-        justify-content: space-around;
+        position: relative;
+        justify-content: flex-end;
+        gap: 80px;
         width: 840px;
         border-radius: 20px;
         background-color: #4F87BA;
         color: #ffffff;
         padding: 20px;
+    }
+
+    .CTA-img {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
     }
 
     .CTA-img img {
@@ -1262,13 +1311,26 @@ hr {
         width: 400px;
     }
 
-    #last_CTA p {
+    p {
+        font-size: 18px;
+    }
+
+    p.ime-klijenta {
         font-size: 20px;
     }
 
+    #kontakt_info {
+        display: flex;
+        justify-content: center;
+    }
 
-
+    #kontakt_info .container {
+        max-width: 880px;
+    }
 }
+
+
+/* VECI EKRAN */
 
 @media screen and (min-width: 1025px) {
 
@@ -1286,6 +1348,7 @@ hr {
     }
 
 
+
     .one-image-div {
         width: 380px;
     }
@@ -1294,15 +1357,23 @@ hr {
         width: 380px;
     }
 
+    #utisci .utisak {
+        padding: 10px 0;
+    }
 
     #last_CTA .container {
-        width: 1040px;
+        width: 1100px;
     }
 
     .CTA-img img {
         height: 200px;
     }
 
+    #last_CTA h2 {
+        width: inherit;
+    }
 
-
+    #kontakt_info .container {
+        min-width: 1100px;
+    }
 }

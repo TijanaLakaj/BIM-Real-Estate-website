@@ -129,8 +129,8 @@ function showGridSlides() {
     slides[prevSlideIndex].classList.add('left');
     slides[currentSlideIndex].classList.add('middle');
     slides[nextSlideIndex].classList.add('right');
-    // clearTimeout(gridTimer);
-    // gridTimer = setTimeout(() => plusGridSlides(1), 4000);
+    clearTimeout(gridTimer);
+    gridTimer = setTimeout(() => plusGridSlides(1), 3000);
 }
 
 function plusGridSlides(n) {
